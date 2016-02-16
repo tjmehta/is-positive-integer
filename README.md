@@ -8,6 +8,8 @@ npm --save i is-positive-integer
 
 # Usage
 ```js
+var isPositiveInteger = require('is-positive-integer')
+
 isPositiveInteger(1) // true
 isPositiveInteger(10) // true
 isPositiveInteger(100) // true
