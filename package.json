@@ -1,0 +1,40 @@
+{
+  "name": "is-positive-integer",
+  "version": "0.0.0",
+  "description": "check if a number is a positive integer",
+  "main": "index.js",
+  "scripts": {
+    "test": "lab --verbose --assert code --threshold 100",
+    "lint": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tjmehta/is-positive-integer.git"
+  },
+  "keywords": [
+    "positive",
+    "integer",
+    "number",
+    "assert",
+    "check",
+    "validate",
+    "negative",
+    "validation"
+  ],
+  "author": "Tejesh Mehta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tjmehta/is-positive-integer/issues"
+  },
+  "homepage": "https://github.com/tjmehta/is-positive-integer#readme",
+  "devDependencies": {
+    "code": "^1.5.0",
+    "lab": "^5.18.1",
+    "standard": "^6.0.5"
+  },
+  "dependencies": {
+    "101": "^1.3.1",
+    "is-integer": "^1.0.6",
+    "is-positive": "^3.1.0"
+  }
+}
