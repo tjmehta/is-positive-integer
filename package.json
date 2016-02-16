@@ -1,6 +1,6 @@
 {
   "name": "is-positive-integer",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "check if a number is a positive integer",
   "main": "index.js",
   "scripts": {
