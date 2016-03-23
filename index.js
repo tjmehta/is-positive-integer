@@ -1,5 +1,5 @@
 module.exports = isPositiveInteger
 
 function isPositiveInteger (x) {
-  return x >> 0 === x && x >> 0 > 0
+  return Number(x) === x && x % 1 === 0 && x > 0;
 }
