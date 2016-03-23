@@ -53,6 +53,8 @@ describe('is-positive-integer', function () {
     expect(isPositiveInteger(/what/)).to.equal(false)
     expect(isPositiveInteger(null)).to.equal(false)
     expect(isPositiveInteger(undefined)).to.equal(false)
+    expect(isPositiveInteger(true)).to.equal(false)
+    expect(isPositiveInteger({ valueOf: 42 })).to.equal(false)
     done()
   })
 })
