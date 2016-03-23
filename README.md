@@ -33,6 +33,19 @@ isPositiveInteger([]) // false
 isPositiveInteger('10') // false
 isPositiveInteger('what') // false
 isPositiveInteger(/what/) // false
+isPositiveInteger(null) // false
+// ...
+```
+
+### isSafePositiveInteger
+Ensure positive integer less than `Number.MAX_SAFE_INTEGER` https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
+```js
+var isSafePositiveInteger = require('is-positive-integer').isSafePositiveInteger
+var MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || 9007199254740991 // doesn't exist in older engines
+
+isSafePositiveInteger(MAX_SAFE_INTEGER) // true
+isSafePositiveInteger(MAX_SAFE_INTEGER + 1) // false
+isSafePositiveInteger(Number.MAX_VALUE) // false
 // ...
 ```
 

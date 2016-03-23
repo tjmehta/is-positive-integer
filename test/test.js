@@ -2,6 +2,7 @@ var Code = require('code')
 var Lab = require('lab')
 
 var isPositiveInteger = require('../index.js')
+var isSafePositiveInteger = isPositiveInteger.isSafePositiveInteger
 
 var MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || 9007199254740991
 
@@ -56,5 +57,19 @@ describe('is-positive-integer', function () {
     expect(isPositiveInteger(true)).to.equal(false)
     expect(isPositiveInteger({ valueOf: function () { return 42 } })).to.equal(false)
     done()
+  })
+
+  describe('isSafePositiveInteger', function() {
+    it('should return true for positive integers', function (done) {
+      expect(isSafePositiveInteger(1)).to.equal(true)
+      expect(isSafePositiveInteger(10)).to.equal(true)
+      expect(isSafePositiveInteger(100)).to.equal(true)
+      expect(isSafePositiveInteger(1000)).to.equal(true)
+      expect(isSafePositiveInteger(90071992555)).to.equal(true)
+      expect(isSafePositiveInteger(999999999999)).to.equal(true)
+      expect(isSafePositiveInteger(MAX_SAFE_INTEGER)).to.equal(true)
+      expect(isSafePositiveInteger(Number.MAX_VALUE)).to.equal(false)
+      done()
+    })
   })
 })
