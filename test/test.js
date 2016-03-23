@@ -14,6 +14,12 @@ describe('is-positive-integer', function () {
     expect(isPositiveInteger(10)).to.equal(true)
     expect(isPositiveInteger(100)).to.equal(true)
     expect(isPositiveInteger(1000)).to.equal(true)
+    if (Number.MAX_SAFE_INTEGER) {
+      expect(isPositiveInteger(Number.MAX_SAFE_INTEGER)).to.equal(true)
+    }
+    if (Number.MAX_VALUE) {
+      expect(isPositiveInteger(Number.MAX_VALUE)).to.equal(true)
+    }
     done()
   })
 
