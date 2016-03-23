@@ -1,5 +1,3 @@
-var passAll = require('101/pass-all')
-var isPositive = require('is-positive')
-var isInteger = require('is-integer')
-
-module.exports = passAll(isPositive, isInteger)
+module.exports = function(n) {
+  return Number(n) === n && n % 1 === 0 && n > 0;
+}
