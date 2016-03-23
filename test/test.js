@@ -45,6 +45,8 @@ describe('is-positive-integer', function () {
     expect(isPositiveInteger('10')).to.equal(false)
     expect(isPositiveInteger('what')).to.equal(false)
     expect(isPositiveInteger(/what/)).to.equal(false)
+    expect(isPositiveInteger(null)).to.equal(false)
+    expect(isPositiveInteger(undefined)).to.equal(false)
     done()
   })
 })
