@@ -21,6 +21,7 @@ describe('is-positive-integer', function () {
     expect(isPositiveInteger(999999999999)).to.equal(true)
     expect(isPositiveInteger(MAX_SAFE_INTEGER)).to.equal(true)
     expect(isPositiveInteger(Number.MAX_VALUE)).to.equal(true)
+	expect(isPositiveInteger(new Number(12))).to.equal(true)
     done()
   })
 
@@ -30,6 +31,8 @@ describe('is-positive-integer', function () {
     expect(isPositiveInteger(-10)).to.equal(false)
     expect(isPositiveInteger(-100)).to.equal(false)
     expect(isPositiveInteger(-1000)).to.equal(false)
+	expect(isPositiveInteger(new Number(0))).to.equal(false)
+	expect(isPositiveInteger(new Number(-12))).to.equal(false)
     done()
   })
 
@@ -42,6 +45,7 @@ describe('is-positive-integer', function () {
     expect(isPositiveInteger(-10.1)).to.equal(false)
     expect(isPositiveInteger(-100.1)).to.equal(false)
     expect(isPositiveInteger(-1000.1)).to.equal(false)
+	expect(isPositiveInteger(new Number(12.45))).to.equal(false)
     done()
   })
 
