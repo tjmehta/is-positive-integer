@@ -8,7 +8,7 @@ module.exports.isSafePositiveInteger = isSafePositiveInteger
 function isPositiveInteger (x) {
   // Is it a number?
   return Object.prototype.toString.call(x) === '[object Number]' &&
-	// Is it an integer?
+    // Is it an integer?
     x % 1 === 0 &&
     // Is it positive?
     x > 0
@@ -18,5 +18,5 @@ function isPositiveInteger (x) {
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
 function isSafePositiveInteger (x) {
   return isPositiveInteger(x) &&
-	x <= MAX_SAFE_INTEGER
+    x <= MAX_SAFE_INTEGER
 }
