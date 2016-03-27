@@ -60,6 +60,7 @@ describe('is-positive-integer', function () {
     expect(isPositiveInteger(undefined)).to.equal(false)
     expect(isPositiveInteger(true)).to.equal(false)
     expect(isPositiveInteger({ valueOf: function () { return 42 } })).to.equal(false)
+    expect(isPositiveInteger(Number.NaN)).to.equal(false)
     done()
   })
 
